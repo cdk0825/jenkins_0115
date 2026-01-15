@@ -19,7 +19,9 @@ pipeline {
             steps {
                 // GitHub Actions의 `run:` 과 동일한 개념
                 // → 실제로 실행될 커맨드
-                bat 'main.sh'
+                //bat 'main.bat'
+                sh 'chmod +x ./main.sh'
+                sh './main.sh'
 
                 // 만약 GitHub Actions였다면 아래와 비슷함
                 // run: main.bat
